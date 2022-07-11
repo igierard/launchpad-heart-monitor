@@ -1,0 +1,41 @@
+{
+  "monitor": {
+    "apps": [
+      {
+        "pm2": {
+          "name": "server",
+          "script": "index.js",
+          "cwd": "./example-server/"
+        }
+      },
+      {
+        "pm2": {
+          "name": "client",
+          "script": "chrome.exe",
+          "cwd": "PATH_TO_CHROMIUM",
+          "args": [
+            "--kiosk",
+            "--app=http://localhost:7000"
+          ],
+          
+          "listen_timeout": 30000
+        },
+        "windows": {
+          "foreground": true
+        },
+        "heartMonitor": {
+          "startupTimeoutMs": -1,
+          "timeoutMs": 10000,
+          "restartDelayMs": 1000
+        }
+      },
+      {
+        "pm2": {
+          "name": "heartMonitor",
+          "script": "heart-monitor.js",
+          "cwd": "./src/"
+        }
+      }
+    ]
+  }
+}

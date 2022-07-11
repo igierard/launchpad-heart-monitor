@@ -1,0 +1,25 @@
+{
+  "name": "launchpad-heart-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igierard/launchpad-heart-monitor"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/igierard/launchpad-heart-monitor/issues"
+  },
+  "homepage": "https://github.com/igierard/launchpad-heart-monitor#readme",
+  "dependencies": {
+    "@bluecadet/launchpad": "^1.0.3",
+    "express": "^4.18.1",
+    "reconnecting-websocket": "^4.4.0",
+    "stream-stream": "^1.2.6",
+    "ws": "^8.8.0"
+  }
+}
